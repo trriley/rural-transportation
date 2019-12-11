@@ -14,31 +14,22 @@
 
 <body>
 
-<div id='map'></div>
+  <div id='map'></div>
 
   <script>
-    // Change this to your Token ----------------------
     mapboxgl.accessToken = 'pk.eyJ1IjoidHJyaWxlMSIsImEiOiJjanVlNGg5aXMwcDF0NDNyeXg4Y3Axc2t0In0.yioavWI-uixNmFWr2piy6Q';
-    // ------------------------------------------------
     var map = new mapboxgl.Map({
       container: 'map',
-      // Change this to your style --------------------
       style: 'mapbox://styles/trrile1/ck41gp4y30mg61cqubs8j0fjj',
-      // ----------------------------------------------
-      // Change to your location ----------------------
       zoom: 8,
       center: [-88.79, 40.49]
-      // ----------------------------------------------
     });
-    // Add geolocate control to the map.
-    map.addControl(new mapboxgl.GeolocateControl({
-      positionOptions: {
-        enableHighAccuracy: true
-      },
-      trackUserLocation: true
-    }));
+    map.on('load', function() {
+      // Add basic controls to the map
+      map.addControl(new mapboxgl.NavigationControl());
+      map.addControl(new mapboxgl.FullscreenControl())
+    });
   </script>
 
 </body>
-
 </html>

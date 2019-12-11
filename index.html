@@ -115,18 +115,24 @@
 <body>
     <iframe src="map\map.html" width="100%" height="440px"></iframe>
     <section>
-        <a href='map\map.html' class="linkbox">Full-screen version</a>
 
-        <h1>Rural Transportation</h1>
-        <h3>in Central Illinois</h3>
-        <h2>Tim Riley</h2>
+        <h1>Rural Transportation in Central Illinois</h1>
+        <h2>by Tim Riley</h2>
         <div class="row">
             <div class="first-column">
                 <p>
-                    lorem ipsum
+                    The above map shows the network of service provided by SHOW BUS, a rural transit agency in Central Illinois.
                 </p>
                 <p>
-                    lorem ipsum
+                    POI data downloaded from the <a href="https://catalog.data.gov/dataset/usgs-national-structures-dataset-nsd-downloadable-data-collection-national-geospatial-data-ass">USGS Structures dataset</a>
+                    , and queried in QGIS 3.6.3. Post offices, hospitals, and government offices are used in this project as convenient stand-ins for the sort of destinations people may need to access via rural transit.
+                </p>
+                <p>
+                    Transit data collected by entering SHOW BUS route information from the agency's <a href="https://www.showbusonline.org/">website</a> into a series of tables following the
+                    <a href="https://gtfs.org/">General Transit Feed Specification</a> (GTFS).
+                    Rural transit networks like that operated by SHOW BUS are difficult to map. There are no fixed stops or routes, no GTFS data, and routes often operate on-demand.
+                    However, enough regularly-scheduled connections between towns occur that it is possible to use census places as a surrogate for stops and create a rough visualization
+                    of how this transit network connects the communities it serves.
                 </p>
             </div>
         </div>
